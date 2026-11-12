@@ -27,6 +27,7 @@ function fitFont(ctx, text, maxW, start, family){ let s = start; ctx.font = `${s
 
 async function draw(cv, o){
   const ctx = cv.getContext("2d"); const pick = o.pick || "heart";
+  await Promise.all(["92px 'IM Fell English SC'","30px 'EB Garamond'","italic 30px 'EB Garamond'","26px 'Source Sans 3'"].map(f => document.fonts.load(f).catch(()=>{})));
   await document.fonts.ready;
   const W = cv.width, H = cv.height, p = P[pick], img = await load(pick);
   const fam = (o.fam || "").trim(), names = (o.names || "").trim();
