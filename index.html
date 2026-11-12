@@ -82,7 +82,7 @@
 </main>
 <script>
 document.getElementById("pgrid").innerHTML = PRAYERS.slice(0,8).map(p =>
-  `<a class="pcard" href="prayers.html#${p.id}"><div class="ico">${p.e}</div><b>${p.t}</b><span>${p.w}</span></a>`).join("");
+  `<a class="pcard" href="prayers.html#${p.id}"><div class="ico">${p.e}</div><div><b>${p.t}</b><span>${p.w}</span></div></a>`).join("");
 FMCard.draw(document.getElementById("sample"), {pick:"heart", fam:"Miller", names:"John, Mary, Peter, Grandma Rose"});
 </script>
 </body>
