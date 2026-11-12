@@ -1,55 +1,38 @@
 <!doctype html>
-<html lang="en" data-base="">
+<html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Prayers of the Church · Father Marcus</title>
-<meta name="description" content="The great traditional Catholic prayers in Latin and English: St. Michael, Memorare, Anima Christi, the prayer for the Pope and more.">
+<meta name="description" content="The great traditional Catholic prayers in Latin and English: St. Michael, the Memorare, Anima Christi, the prayer for the Pope and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English+SC&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:wght@400;600;700;800&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="site.js"></script>
+<script src="site.js"></script><script src="prayers.js"></script>
 </head>
 <body>
-<main><section><div class="wrap">
-  <div class="eyebrow">The treasury</div>
-  <h1>Prayers of the Church</h1>
-  <p style="color:var(--muted);max-width:62ch">The prayers our grandparents knew by heart, in the language of the Church and in English. Pray them, learn them, and send them to someone who needs them today.</p>
-  <div class="rule">✠</div>
-  <div id="list"></div>
-</div></section></main>
+<main>
+  <section class="phero"><div class="wrap">
+    <div class="kicker">🙏 The treasury of the Church</div>
+    <h1>Prayers for every moment</h1>
+    <p class="lead">The prayers our grandparents knew by heart, in English and in the language of the Church. Pray them, learn them, and send them to someone who needs them today.</p>
+    <div class="chips" id="chips"></div>
+  </div></section>
+  <section style="padding-top:30px"><div class="wrap" id="list" style="max-width:860px"></div></section>
+</main>
 <script>
-const PR = [
- {t:"Prayer to St. Michael the Archangel", w:"For protection · Pope Leo XIII",
-  la:"Sancte Michael Archangele, defende nos in proelio; contra nequitiam et insidias diaboli esto praesidium. Imperet illi Deus, supplices deprecamur: tuque, Princeps militiae caelestis, Satanam aliosque spiritus malignos, qui ad perditionem animarum pervagantur in mundo, divina virtute in infernum detrude. Amen.",
-  en:"Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do thou, O Prince of the heavenly host, by the power of God, thrust into hell Satan and all the evil spirits who prowl about the world seeking the ruin of souls. Amen."},
- {t:"Prayer for the Pope", w:"For the Holy Father",
-  la:"Oremus pro Pontifice nostro Leone. Dominus conservet eum, et vivificet eum, et beatum faciat eum in terra, et non tradat eum in animam inimicorum eius.",
-  en:"Let us pray for our Pope, Leo. May the Lord preserve him, and give him life, and make him blessed upon the earth, and deliver him not up to the will of his enemies."},
- {t:"The Memorare", w:"In any need",
-  la:"Memorare, O piissima Virgo Maria, non esse auditum a saeculo, quemquam ad tua currentem praesidia, tua implorantem auxilia, tua petentem suffragia, esse derelictum. Ego tali animatus confidentia, ad te, Virgo Virginum, Mater, curro, ad te venio, coram te gemens peccator assisto. Noli, Mater Verbi, verba mea despicere; sed audi propitia et exaudi. Amen.",
-  en:"Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thine intercession was left unaided. Inspired by this confidence, I fly unto thee, O Virgin of virgins, my Mother; to thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen."},
- {t:"Anima Christi", w:"After Holy Communion",
-  la:"Anima Christi, sanctifica me. Corpus Christi, salva me. Sanguis Christi, inebria me. Aqua lateris Christi, lava me. Passio Christi, conforta me. O bone Iesu, exaudi me. Intra tua vulnera absconde me. Ne permittas me separari a te. Ab hoste maligno defende me. In hora mortis meae voca me, et iube me venire ad te, ut cum Sanctis tuis laudem te in saecula saeculorum. Amen.",
-  en:"Soul of Christ, sanctify me. Body of Christ, save me. Blood of Christ, inebriate me. Water from the side of Christ, wash me. Passion of Christ, strengthen me. O good Jesus, hear me. Within Thy wounds hide me. Suffer me not to be separated from Thee. From the malicious enemy defend me. In the hour of my death call me, and bid me come unto Thee, that with Thy saints I may praise Thee for ever and ever. Amen."},
- {t:"Sub Tuum Praesidium", w:"The oldest prayer to Our Lady",
-  la:"Sub tuum praesidium confugimus, Sancta Dei Genetrix. Nostras deprecationes ne despicias in necessitatibus, sed a periculis cunctis libera nos semper, Virgo gloriosa et benedicta.",
-  en:"We fly to thy protection, O holy Mother of God. Despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin."},
- {t:"Prayer to the Guardian Angel", w:"Morning and night",
-  la:"Angele Dei, qui custos es mei, me tibi commissum pietate superna illumina, custodi, rege et guberna. Amen.",
-  en:"Angel of God, my guardian dear, to whom God's love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen."},
- {t:"Eternal Rest", w:"For the faithful departed",
-  la:"Requiem aeternam dona eis, Domine, et lux perpetua luceat eis. Requiescant in pace. Amen.",
-  en:"Eternal rest grant unto them, O Lord, and let perpetual light shine upon them. May they rest in peace. Amen."}
-];
-document.getElementById("list").innerHTML = PR.map((p,i)=>`
- <div class="prayer" id="p${i}">
-  <div class="eyebrow">${p.w}</div><h3>${p.t}</h3>
-  <div class="two"><p class="la">${p.la}</p><p>${p.en}</p></div>
-  <div class="tools"><button onclick="share(${i})">Send on WhatsApp</button><button onclick="copyP(${i})">Copy</button></div>
+const P = PRAYERS;
+document.getElementById("chips").innerHTML = P.map(p => `<a href="#${p.id}">${p.e} ${p.t}</a>`).join("");
+document.getElementById("list").innerHTML = P.map((p,i) => `
+ <div class="prayer" id="${p.id}">
+  <div class="head"><div class="ico">${p.e}</div><h3>${p.t}<small>${p.w}</small></h3></div>
+  ${p.la ? `<div class="tabs"><button class="on" onclick="lang(${i},'en',this)">English</button><button onclick="lang(${i},'la',this)">Latina</button></div>` : ""}
+  <p class="ptext" id="t${i}">${p.en}</p>
+  <div class="share"><button class="w" onclick="wa(${i})">💬 Send on WhatsApp</button><button onclick="cp(${i},this)">📋 Copy</button></div>
  </div>`).join("");
-function text(i){ return `${PR[i].t}\n\n${PR[i].en}\n\n— from Father Marcus: ${location.href.split('#')[0]}#p${i}`; }
-function share(i){ window.open("https://wa.me/?text="+encodeURIComponent(text(i)), "_blank"); }
-function copyP(i){ navigator.clipboard.writeText(text(i)); }
+function lang(i,l,b){ const t=document.getElementById("t"+i); t.textContent=P[i][l]; t.className="ptext"+(l==="la"?" la":""); b.parentNode.querySelectorAll("button").forEach(x=>x.classList.remove("on")); b.classList.add("on"); }
+function msg(i){ return `${P[i].e} ${P[i].t}\n\n${P[i].en}\n\n🙏 ${location.origin}${location.pathname}#${P[i].id}`; }
+function wa(i){ window.open("https://wa.me/?text="+encodeURIComponent(msg(i)), "_blank"); }
+function cp(i,b){ navigator.clipboard.writeText(msg(i)); b.textContent="✅ Copied"; setTimeout(()=>b.textContent="📋 Copy",1500); }
 </script>
 </body>
 </html>
