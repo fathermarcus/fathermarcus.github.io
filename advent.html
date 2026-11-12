@@ -12,7 +12,7 @@
 <body>
 <main>
   <section class="ahero"><div class="wrap">
-    <div class="kicker">🕯️ November 29 – December 24, 2026</div>
+    <div class="kicker">November 29 – December 24, 2026</div>
     <h1>A traditional Advent</h1>
     <p class="lead">Before the lights and the shopping, the Church kept Advent as a season of watching and longing. Bring it back to your table this year.</p>
     <p class="rorate">Rorate caeli desuper, et nubes pluant iustum.</p>
@@ -25,7 +25,7 @@
     <p class="lead">Four candles: three violet and one rose. Light one more each Sunday, and pray together at supper.</p>
     <div class="wreath" id="wreath"></div>
     <div class="prayer">
-      <div class="head"><div class="ico">📜</div><h3>Collect of the First Sunday of Advent<small>Pray it at the lighting</small></h3></div>
+      <div class="head"><div class="ico">✠</div><h3>Collect of the First Sunday of Advent<small>Pray it at the lighting</small></h3></div>
       <div class="two" style="margin-top:14px">
         <p class="la">Excita, quaesumus, Domine, potentiam tuam, et veni: ut ab imminentibus peccatorum nostrorum periculis, te mereamur protegente eripi, te liberante salvari.</p>
         <p class="en">Stir up Thy might, we beseech Thee, O Lord, and come: that from the threatening dangers of our sins we may deserve to be rescued by Thy protection, and saved by Thy deliverance.</p>
@@ -45,7 +45,7 @@
 const Y=2026, now=new Date();
 const S=[["1st Sunday",new Date(Y,10,29),"Hope","🙏"],["2nd Sunday",new Date(Y,11,6),"Peace","🕊️"],["3rd · Gaudete",new Date(Y,11,13),"Joy","🌹"],["4th Sunday",new Date(Y,11,20),"Love","❤️"]];
 let cur=-1; S.forEach((s,i)=>{ if(now>=s[1]) cur=i; }); const live = now < new Date(Y,11,25);
-document.getElementById("wreath").innerHTML=S.map((s,i)=>`<div class="candle ${i===2?'rose':''} ${live&&i<=cur?'lit':''} ${live&&i===cur?'today':''}"><div class="wax"></div><b>${s[3]} ${s[0]}</b><br><span class="note">${s[1].toLocaleDateString('en-US',{month:'long',day:'numeric'})} · ${s[2]}</span></div>`).join("");
+document.getElementById("wreath").innerHTML=S.map((s,i)=>`<div class="candle ${i===2?'rose':''} ${live&&i<=cur?'lit':''} ${live&&i===cur?'today':''}"><div class="wax"></div><b>${s[0]}</b><br><span class="note">${s[1].toLocaleDateString('en-US',{month:'long',day:'numeric'})} · ${s[2]}</span></div>`).join("");
 const A=[
  [17,"O Sapientia","O Wisdom","O Sapientia, quae ex ore Altissimi prodiisti, attingens a fine usque ad finem, fortiter suaviterque disponens omnia: veni ad docendum nos viam prudentiae.","O Wisdom, who came forth from the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come and teach us the way of prudence."],
  [18,"O Adonai","O Lord","O Adonai, et Dux domus Israel, qui Moysi in igne flammae rubi apparuisti, et ei in Sina legem dedisti: veni ad redimendum nos in brachio extento.","O Lord and Ruler of the house of Israel, who appeared to Moses in the flame of the burning bush and gave him the law on Sinai: come and redeem us with an outstretched arm."],

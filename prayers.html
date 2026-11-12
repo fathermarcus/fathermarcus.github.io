@@ -12,7 +12,7 @@
 <body>
 <main>
   <section class="phero"><div class="wrap">
-    <div class="kicker">🙏 The treasury of the Church</div>
+    <div class="kicker">The treasury of the Church</div>
     <h1>Prayers for every moment</h1>
     <p class="lead">The prayers our grandparents knew by heart, in English and in the language of the Church. Pray them, learn them, and send them to someone who needs them today.</p>
     <div class="chips" id="chips"></div>
@@ -21,18 +21,18 @@
 </main>
 <script>
 const P = PRAYERS;
-document.getElementById("chips").innerHTML = P.map(p => `<a href="#${p.id}">${p.e} ${p.t}</a>`).join("");
+document.getElementById("chips").innerHTML = P.map(p => `<a href="#${p.id}">${p.t}</a>`).join("");
 document.getElementById("list").innerHTML = P.map((p,i) => `
  <div class="prayer" id="${p.id}">
   <div class="head"><div class="ico">${p.e}</div><h3>${p.t}<small>${p.w}</small></h3></div>
   ${p.la ? `<div class="tabs"><button class="on" onclick="lang(${i},'en',this)">English</button><button onclick="lang(${i},'la',this)">Latina</button></div>` : ""}
   <p class="ptext" id="t${i}">${p.en}</p>
-  <div class="share"><button class="w" onclick="wa(${i})">💬 Send on WhatsApp</button><button onclick="cp(${i},this)">📋 Copy</button></div>
+  <div class="share"><button class="w" onclick="wa(${i})">Send on WhatsApp</button><button onclick="cp(${i},this)">Copy</button></div>
  </div>`).join("");
 function lang(i,l,b){ const t=document.getElementById("t"+i); t.textContent=P[i][l]; t.className="ptext"+(l==="la"?" la":""); b.parentNode.querySelectorAll("button").forEach(x=>x.classList.remove("on")); b.classList.add("on"); }
 function msg(i){ return `${P[i].e} ${P[i].t}\n\n${P[i].en}\n\n🙏 ${location.origin}${location.pathname}#${P[i].id}`; }
 function wa(i){ window.open("https://wa.me/?text="+encodeURIComponent(msg(i)), "_blank"); }
-function cp(i,b){ navigator.clipboard.writeText(msg(i)); b.textContent="✅ Copied"; setTimeout(()=>b.textContent="📋 Copy",1500); }
+function cp(i,b){ navigator.clipboard.writeText(msg(i)); b.textContent="Copied"; setTimeout(()=>b.textContent="Copy",1500); }
 </script>
 </body>
 </html>
