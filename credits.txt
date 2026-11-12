@@ -1,0 +1,4 @@
+sacred_heart: File:SacredHeartBatoni.jpg | CC0 | https://commons.wikimedia.org/wiki/File:SacredHeartBatoni.jpg
+st_joseph: File:Guido Reni - Saint Joseph and the Christ Child - Google Art Project.jpg | Public domain | https://commons.wikimedia.org/wiki/File:Guido_Reni_-_Saint_Joseph_and_the_Christ_Child_-_Google_Art_Project.jpg
+our_lady: File:The Virgin in Prayer - Giovanni Battista Salvi (Sassoferrato).jpg | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:The_Virgin_in_Prayer_-_Giovanni_Battista_Salvi_(Sassoferrato).jpg
+st_michael: File:GuidoReni MichaelDefeatsSatan.jpg | Public domain | https://commons.wikimedia.org/wiki/File:GuidoReni_MichaelDefeatsSatan.jpg
