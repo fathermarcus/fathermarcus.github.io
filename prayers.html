@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prayers of the Church · Father Marcus</title>
-<meta name="description" content="The great traditional Catholic prayers in Latin and English: St. Michael, the Memorare, Anima Christi, the prayer for the Pope and more.">
+<title data-i18n="pr.title">Prayers of the Church · Father Marcus</title>
+<meta name="description" data-i18n-content="pr.desc" content="The great traditional Catholic prayers in Latin and English: St. Michael, the Memorare, Anima Christi, the prayer for the Pope and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:wght@400;600;700;800&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="site.js"></script><script src="prayers.js"></script>
+<script src="i18n.js"></script><script src="site.js"></script><script src="prayers.js"></script>
 </head>
 <body>
 <main>
   <section class="phero"><div class="wrap">
-    <div class="kicker">The treasury of the Church</div>
-    <h1>Prayers for every moment</h1>
-    <p class="lead">The prayers our grandparents knew by heart, in English and in the language of the Church. Pray them, learn them, and send them to someone who needs them today.</p>
+    <div class="kicker" data-i18n="pr.kicker">The treasury of the Church</div>
+    <h1 data-i18n="pr.h1">Prayers for every moment</h1>
+    <p class="lead" data-i18n="pr.lead">The prayers our grandparents knew by heart, in English and in the language of the Church. Pray them, learn them, and send them to someone who needs them today.</p>
     <div class="chips" id="chips"></div>
   </div></section>
   <section style="padding-top:30px"><div class="wrap" id="list" style="max-width:860px"></div></section>
@@ -25,14 +25,14 @@ document.getElementById("chips").innerHTML = P.map(p => `<a href="#${p.id}">${p.
 document.getElementById("list").innerHTML = P.map((p,i) => `
  <div class="prayer" id="${p.id}">
   <div class="head"><div class="ico">${p.e}</div><h3>${p.t}<small>${p.w}</small></h3></div>
-  ${p.la ? `<div class="tabs"><button class="on" onclick="lang(${i},'en',this)">English</button><button onclick="lang(${i},'la',this)">Latina</button></div>` : ""}
-  <p class="ptext" id="t${i}">${p.en}</p>
-  <div class="share"><button class="w" onclick="wa(${i})">Send on WhatsApp</button><button onclick="cp(${i},this)">Copy</button></div>
+  ${p.la ? `<div class="tabs"><button class="on" onclick="lang(${i},'v',this)">${T("pr.tabV")}</button><button onclick="lang(${i},'la',this)">Latina</button></div>` : ""}
+  <p class="ptext" id="t${i}">${p.v}</p>
+  <div class="share"><button class="w" onclick="wa(${i})">${T("pr.wa")}</button><button onclick="cp(${i},this)">${T("pr.copy")}</button></div>
  </div>`).join("");
 function lang(i,l,b){ const t=document.getElementById("t"+i); t.textContent=P[i][l]; t.className="ptext"+(l==="la"?" la":""); b.parentNode.querySelectorAll("button").forEach(x=>x.classList.remove("on")); b.classList.add("on"); }
-function msg(i){ return `${P[i].e} ${P[i].t}\n\n${P[i].en}\n\n🙏 ${location.origin}${location.pathname}#${P[i].id}`; }
+function msg(i){ return `${P[i].e} ${P[i].t}\n\n${P[i].v}\n\n🙏 ${location.origin}${location.pathname}${FM.langQuery()}#${P[i].id}`; }
 function wa(i){ window.open("https://wa.me/?text="+encodeURIComponent(msg(i)), "_blank"); }
-function cp(i,b){ navigator.clipboard.writeText(msg(i)); b.textContent="Copied"; setTimeout(()=>b.textContent="Copy",1500); }
+function cp(i,b){ navigator.clipboard.writeText(msg(i)); b.textContent=T("pr.copied"); setTimeout(()=>b.textContent=T("pr.copy"),1500); }
 </script>
 </body>
 </html>

@@ -1,0 +1,189 @@
+PRAYER SOURCES · Pray With Father Marcus (fathermarcus.github.io)
+Texts used in prayers.js (prayers page and home page), advent.html (Collect, Rorate, O Antiphons).
+Latin texts are identical in all languages. English texts are the original site texts (unchanged).
+STATUS: verified = checked word for word against the source · adapted = small change, explained · OUR TRANSLATION / NOT VERIFIED = to be checked by a priest or with a printed book.
+Changes to the sources: only capitalisation of pronouns (Tu/Vous/Du), 'Amen' added where missing, typos fixed.
+
+======================================================================
+SPANISH (es)
+======================================================================
+- Morning Offering — "Ofrecimiento de obras (Apostolado de la Oración)"
+  source: https://www.vaticannews.va/es/fiestas-liturgicas/sagrado-corazon-de-jesus.html
+  status: verified (short form of the Apostleship of Prayer offering, Vatican News)
+- Night prayer (Visita, quaesumus) — "Oración de Completas: Visita, Señor, esta casa"
+  source: https://prensamercosur.org/2025/12/18/sacerdote-comparte-oracion-para-pedir-la-proteccion-de-dios-sobre-tu-hogar-o-lugar-de-trabajo/
+  status: adapted: only found as quoted by a priest (Liturgia de las Horas wording); removed his insertion '(negocio, oficina o taller)' and fixed 'de ellas'->'de ella'. Not checked against the printed Liturgia de las Horas.
+- St. Michael — "Oración a San Miguel Arcángel"
+  source: https://www.vaticannews.va/es/oraciones/san-miguel-arcangel.html
+  status: verified
+- Prayer for the Pope — "Oración por el Papa"
+  source: https://www.vaticannews.va/es/oraciones/la-oracion-por-el-papa.html
+  status: verified (versicle and response only; the page continues with Padre nuestro, Ave María and the collect 'Dios nuestro, pastor y guía de todos los fieles...')
+- Memorare — "Acordaos"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_sp.html
+  status: verified (Compendio del Catecismo, Apéndice A; mixes 'Acordaos' with 'tu/ti' as in the official text)
+- Anima Christi — "Alma de Cristo"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_sp.html
+  status: verified (Compendio, Apéndice A; only punctuation normalised at line ends)
+- Sub tuum praesidium — "Bajo tu amparo"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_sp.html
+  status: verified (Compendio, Apéndice A)
+- Guardian Angel — "Ángel de la Guarda"
+  source: https://www.aciprensa.com/Oracion/angelguarda.htm
+  status: verified (ACI Prensa children's version; source has 'sólo', accent dropped per current spelling and comma added). Many families say 'Ángel de la Guarda, dulce compañía...' and add 'hasta que descanse en los brazos de Jesús, José y María'. Formal Angele Dei (Compendio): 'Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, defiéndeme y gobiérname. Amén.'
+- Eternal Rest — "Dales, Señor, el descanso eterno"
+  source: https://www.vaticannews.va/es/oraciones/el-eterno-reposo.html
+  status: adapted: Vatican News / Compendio give the singular 'Dale Señor el descanso eterno. Brille para él la luz perpetua. Descanse en paz. Amén'; put into the plural (requiem aeternam dona EIS), the form used in Spanish rosaries for the dead.
+- Advent: Collect 1st Sunday (1962) — "Colecta del I Domingo de Adviento (Misal de 1962)"
+  source: https://maternalheart.org/propios_de_la_misa/adviento/adviento_1.pdf
+  status: verified (Latin-Spanish propers of the 1962 Missal)
+- Advent: Rorate caeli (Is 45:8) — "Rorate caeli (Cielos, enviad rocío)"
+  source: https://maternalheart.org/propios_de_la_misa/adviento/adviento_4.pdf
+  status: verified (Introito del IV Domingo de Adviento, Misal de 1962). The same PDF gives the sung refrain: 'Destilad, cielos, desde lo alto, y que las nubes lluevan al justo.'
+- Advent: O Antiphon Dec 17 — "Oh Sabiduría"
+  source: https://cpl.es/wp-content/uploads/galilea/2018/10/Antifonas-de-la-O.pdf
+  status: verified (Centre de Pastoral Litúrgica, Liturgia de las Horas wording)
+- Advent: O Antiphon Dec 18 — "Oh Adonai"
+  source: https://cpl.es/wp-content/uploads/galilea/2018/10/Antifonas-de-la-O.pdf
+  status: verified
+- Advent: O Antiphon Dec 19 — "Oh Renuevo del tronco de Jesé"
+  source: https://cpl.es/wp-content/uploads/galilea/2018/10/Antifonas-de-la-O.pdf
+  status: verified (ACI Prensa titles it 'Oh Raíz de Jesé')
+- Advent: O Antiphon Dec 20 — "Oh Llave de David"
+  source: https://cpl.es/wp-content/uploads/galilea/2018/10/Antifonas-de-la-O.pdf
+  status: verified
+- Advent: O Antiphon Dec 21 — "Oh Sol que naces de lo alto"
+  source: https://cpl.es/wp-content/uploads/galilea/2018/10/Antifonas-de-la-O.pdf
+  status: verified (ACI Prensa version begins 'Oh Amanecer')
+- Advent: O Antiphon Dec 22 — "Oh Rey de las naciones"
+  source: https://cpl.es/wp-content/uploads/galilea/2018/10/Antifonas-de-la-O.pdf
+  status: verified
+- Advent: O Antiphon Dec 23 — "Oh Emmanuel"
+  source: https://cpl.es/wp-content/uploads/galilea/2018/10/Antifonas-de-la-O.pdf
+  status: verified
+
+======================================================================
+FRENCH (fr)
+======================================================================
+- Morning Offering — "Offrande de la journée (Apostolat de la Prière)"
+  source: https://www.sodalitium.eu/wp-content/uploads/2024/04/BilletMai2024.pdf
+  status: adapted: the traditional formula is copied from an Apostolat de la Prière monthly leaflet (source capitalises 'Vous'). Its last sentence gave that month's intention, so I replaced it with a generic sentence for the Pope's intention, and 'Amen' is added. Caution: the publisher is a traditionalist institute not in communion with Rome. The wording is the standard pre-conciliar text, but no mainstream page was found.
+- Night prayer (Visita, quaesumus) — "Oraison des Complies : Visitez, Seigneur, cette demeure"
+  source: https://eglisesaintgeorges.com/wp-content/uploads/2020/03/Office-des-Complies.pdf
+  status: verified (French translation of the Roman Breviary Complies; the source capitalises 'Vous/Vos/Votre')
+- St. Michael — "Prière à saint Michel Archange"
+  source: https://www.vaticannews.va/fr/priere/saint-michel-archange.html
+  status: verified
+- Prayer for the Pope — "Prière pour le Pape"
+  source: https://www.vaticannews.va/fr/priere/priere-pour-le-pape.html
+  status: verified (versicle and response only; the page goes on with Notre Père, Je vous salue Marie and the collect)
+- Memorare — "Souvenez-vous"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_fr.html
+  status: verified (Compendium, Annexe A)
+- Anima Christi — "Âme du Christ"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_fr.html
+  status: verified (Compendium, Annexe A; the source prints 'Saints' capitalised)
+- Sub tuum praesidium — "Sous l'abri de ta miséricorde"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_fr.html
+  status: verified (Compendium, Annexe A; also on Vatican News fr/priere/sous-l-abri-de-ta-misericorde.html)
+- Guardian Angel — "Ange de Dieu"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_fr.html
+  status: verified (Compendium, Annexe A; this is the prayer French children learn)
+- Eternal Rest — "Le repos éternel"
+  source: https://www.vaticannews.va/fr/priere/le-repos-eternel.html
+  status: verified (Vatican News = Compendium). The older 'vous' form ('Seigneur, donnez-leur le repos éternel...') was not found in a reliable source.
+- Advent: Collect 1st Sunday (1962) — "Collecte du 1er dimanche de l'Avent (Missel de 1962)"
+  source: https://schola-sainte-cecile.com/programmes/2008-2009/01-avent/Avent01.pdf
+  status: verified (Schola Sainte-Cécile, Paris, traditional Mass booklet; fixed the source's typo 'règne'). The classic 'Excitez, Seigneur, votre puissance et venez...' (vous form) was not found online.
+- Advent: Rorate caeli (Is 45:8) — "Rorate caeli (Répandez, ô cieux, votre rosée)"
+  source: https://schola-sainte-cecile.com/programmes/2008-2009/01-avent/Avent04.pdf
+  status: verified (French rendering of the Introit of the 4th Sunday of Advent and of the Rorate refrain; comma after 'vous' added)
+- Advent: O Antiphon Dec 17 — "Ô Sagesse"
+  source: https://www.aelf.org/2025-12-17/romain/vepres
+  status: verified (AELF, Magnificat antiphon at Vespers)
+- Advent: O Antiphon Dec 18 — "Ô Chef de ton peuple"
+  source: https://www.aelf.org/2025-12-18/romain/vepres
+  status: verified (AELF; French liturgy says 'Chef' for Adonai)
+- Advent: O Antiphon Dec 19 — "Ô Rameau de Jessé"
+  source: https://www.aelf.org/2025-12-19/romain/vepres
+  status: verified (AELF)
+- Advent: O Antiphon Dec 20 — "Ô Clé de David"
+  source: https://www.aelf.org/2025-12-20/romain/vepres
+  status: verified (AELF)
+- Advent: O Antiphon Dec 21 — "Ô Soleil levant"
+  source: https://www.aelf.org/2025-12-21/romain/vepres
+  status: verified (AELF)
+- Advent: O Antiphon Dec 22 — "Ô Roi de l'univers"
+  source: https://www.aelf.org/2025-12-22/romain/vepres
+  status: verified (AELF)
+- Advent: O Antiphon Dec 23 — "Ô Emmanuel"
+  source: https://www.aelf.org/2025-12-23/romain/vepres
+  status: verified (AELF)
+
+======================================================================
+GERMAN (de)
+======================================================================
+- Morning Offering — "Morgengebet des Gebetsapostolats (Aufopferung)"
+  source: (none found)
+  status: OUR TRANSLATION, following the traditional Apostleship of Prayer formula. No German text was found online.
+- Night prayer (Visita, quaesumus) — "Komplet-Oration: Herr, suche diese Wohnung heim"
+  source: (none found)
+  status: OUR TRANSLATION of 'Visita, quaesumus, Domine, habitationem istam'. The German Stundenbuch/Schott wording could not be found online.
+- St. Michael — "Gebet zum heiligen Erzengel Michael"
+  source: https://www.ludwig-neidhart.de/Downloads/KatholischeFormeln.pdf (variante oficial en Vatican News: https://www.vaticannews.va/de/gebete/heiliger-erzengel-michael.html)
+  status: verified (traditional 'verteidige uns im Kampfe' wording, Katholische Formeln); Vatican News prints a variant beginning 'beschirme uns im Kampfe'
+- Prayer for the Pope — "Gebet für den Papst"
+  source: https://www.vaticannews.va/de/gebete/gebet-fur-den-papst.html
+  status: verified (versicle and response only; the page goes on with Vater unser, Gegrüßet seist du Maria and the collect)
+- Memorare — "Gedenke, o gütigste Jungfrau Maria"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_ge.html
+  status: verified (Kompendium, Anhang A)
+- Anima Christi — "Seele Christi"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_ge.html
+  status: verified (Kompendium, Anhang A)
+- Sub tuum praesidium — "Unter deinen Schutz und Schirm"
+  source: https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_ge.html
+  status: verified (Kompendium, Anhang A)
+- Guardian Angel — "Heiliger Schutzengel mein"
+  source: (none found)
+  status: NOT VERIFIED online: traditional children's prayer as commonly said (no reliable web page found)
+- Eternal Rest — "Herr, gib ihnen die ewige Ruhe"
+  source: https://www.vaticannews.va/de/gebete/herr--gib-ihnen-die-ewige-ruhe.html
+  status: verified (Vatican News = Kompendium)
+- Advent: Collect 1st Sunday (1962) — "Oration vom 1. Adventssonntag (Missale 1962)"
+  source: (none found)
+  status: OUR TRANSLATION, modelled on the Schott opening 'Biete auf, o Herr, deine Macht'. The exact Schott text was not found online.
+- Advent: Rorate caeli (Is 45:8) — "Tauet, Himmel, den Gerechten (Rorate caeli)"
+  source: https://www.kath-kirche-kaernten.at/images/downloads/werkbuch-zur-feier-tagzeitenliturgie-mit-dem-gotteslob-1975.pdf
+  status: verified (Gotteslob 1975, no. 117,1, as cited in the Diocese of Gurk-Klagenfurt Werkbuch). The full antiphon continues: 'Tu dich auf, o Erde, und sprosse den Heiland hervor.' The hymn title is 'Tauet, Himmel, den Gerechten' (GL 812).
+- Advent: O Antiphon Dec 17 — "O Weisheit"
+  source: https://canticasacra.org/o-antiphons-iarvo-part-o-weisheit/
+  status: adapted: German Stundenbuch wording as set by Arvo Pärt (Sieben Magnificat-Antiphonen), text from canticasacra.org; titles confirmed by Deutsches Liturgisches Institut PDFs. Removed Pärt's closing repetition 'O Weisheit' and fixed 'zu andern'->'zum andern'. Not checked against the printed Stundenbuch.
+- Advent: O Antiphon Dec 18 — "O Adonai"
+  source: https://canticasacra.org/o-antiphons-iiarvo-parto-adonai/
+  status: adapted: German Stundenbuch wording as set by Arvo Pärt (Sieben Magnificat-Antiphonen), text from canticasacra.org; titles confirmed by Deutsches Liturgisches Institut PDFs. Removed the closing repetition and fixed typos ('im flammender', 'straken'). The source reads 'der Herr und Führer' and 'dem Moses'.
+- Advent: O Antiphon Dec 19 — "O Spross aus Isais Wurzel"
+  source: https://canticasacra.org/o-antiphons-iiiarvo-parto-spros-aus-isais-wurzel/
+  status: adapted: German Stundenbuch wording as set by Arvo Pärt (Sieben Magnificat-Antiphonen), text from canticasacra.org; titles confirmed by Deutsches Liturgisches Institut PDFs. Source spelling is 'Sproß'.
+- Advent: O Antiphon Dec 20 — "O Schlüssel Davids"
+  source: https://canticasacra.org/o-antiphons-ivarvo-parto-schlussel-davids/
+  status: adapted: German Stundenbuch wording as set by Arvo Pärt (Sieben Magnificat-Antiphonen), text from canticasacra.org; titles confirmed by Deutsches Liturgisches Institut PDFs. 
+- Advent: O Antiphon Dec 21 — "O Morgenstern"
+  source: https://canticasacra.org/o-antiphons-varvo-parto-morgenstern/
+  status: adapted: German Stundenbuch wording as set by Arvo Pärt (Sieben Magnificat-Antiphonen), text from canticasacra.org; titles confirmed by Deutsches Liturgisches Institut PDFs. 
+- Advent: O Antiphon Dec 22 — "O König aller Völker"
+  source: https://canticasacra.org/o-antiphons-viarvo-parto-konig-aller-volker/
+  status: adapted: German Stundenbuch wording as set by Arvo Pärt (Sieben Magnificat-Antiphonen), text from canticasacra.org; titles confirmed by Deutsches Liturgisches Institut PDFs. Source spelling is 'Schlußstein'.
+- Advent: O Antiphon Dec 23 — "O Immanuel"
+  source: https://canticasacra.org/o-antiphons-viiarvo-parto-immanuel/
+  status: adapted: German Stundenbuch wording as set by Arvo Pärt (Sieben Magnificat-Antiphonen), text from canticasacra.org; titles confirmed by Deutsches Liturgisches Institut PDFs. 
+
+======================================================================
+CONSECRATION CARD (card.js)
+======================================================================
+The short consecration prayers on the card are our own devotional texts (no source). The English originals were translated
+faithfully into es/fr/de. The 4 new prayers (Immaculate Conception, Guadalupe, Lourdes, Altötting) were written in the same style:
+no indulgences or promises. Quoted words of Our Lady to St. Juan Diego ("¿No estoy yo aquí, que soy tu Madre?") come from the Nican Mopohua.
+Invocations: traditional ejaculations (e.g. "O Mary, conceived without sin, pray for us who have recourse to thee", Miraculous Medal).
+Latin card lines: Cor Iesu sacratissimum, miserere nobis · Cor Mariae immaculatum, ora pro nobis · O Maria, sine labe concepta, ora pro nobis qui ad te confugimus ·
+Sancta Dei Genetrix, ora pro nobis · Sancta Maria de Guadalupe, ora pro nobis · Domina nostra de Lourdes, ora pro nobis (simple Latin invocations, not liturgical texts).

@@ -2,80 +2,80 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Father Marcus · Prayers for the Catholic home</title>
-<meta name="description" content="Consecrate your home, pray the great prayers of the Church, and keep a traditional Advent with Father Marcus. Free, always.">
+<title data-i18n="ix.title">Father Marcus · Prayers for the Catholic home</title>
+<meta name="description" data-i18n-content="ix.desc" content="Consecrate your home, pray the great prayers of the Church, and keep a traditional Advent with Father Marcus. Free, always.">
 <meta property="og:title" content="Consecrate your home · Father Marcus"><meta property="og:image" content="https://fathermarcus.github.io/father_marcus_rome.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:wght@400;600;700;800&family=EB+Garamond:ital,wght@0,400;1,400&family=IM+Fell+English+SC&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="site.js"></script><script src="prayers.js"></script><script src="card.js"></script>
+<script src="i18n.js"></script><script src="site.js"></script><script src="prayers.js"></script><script src="card.js"></script>
 </head>
 <body>
 <main>
   <section class="hero" style="padding:0"><div class="wrap grid">
     <div class="txt">
-      <div class="kicker">Prayers for the Catholic home</div>
-      <h1>Bring the faith <em>home.</em></h1>
-      <p>Consecrate your family, pray the great prayers of the Church in Latin and English, and keep a true Advent this year.</p>
+      <div class="kicker" data-i18n="ix.kicker">Prayers for the Catholic home</div>
+      <h1 data-i18n="ix.h1">Bring the faith <em>home.</em></h1>
+      <p data-i18n="ix.p">Consecrate your family, pray the great prayers of the Church in Latin and English, and keep a true Advent this year.</p>
       <div class="acts">
-        <a class="btn gold" href="consecrate.html">Consecrate my home</a>
-        <a class="btn line" href="prayers.html">Pray now</a>
+        <a class="btn gold" href="consecrate.html" data-i18n="ix.btn1">Consecrate my home</a>
+        <a class="btn line" href="prayers.html" data-i18n="ix.btn2">Pray now</a>
       </div>
-      <div class="trust"><span>Free, always</span><span>No sign-up</span><span>Latin &amp; English</span></div>
+      <div class="trust" data-i18n="ix.trust"><span>Free, always</span><span>No sign-up</span><span>Latin &amp; English</span></div>
     </div>
     <div class="pic">
-      <img src="father_marcus_rome.jpg" alt="Father Marcus in Rome, St. Peter's dome behind him">
-      <div class="badge">Father Marcus<small>News from Rome, ended in prayer</small></div>
+      <img data-fm-photo="hero" src="father_marcus_rome.jpg" alt="Father Marcus in Rome, St. Peter's dome behind him">
+      <div class="badge"><span data-fm="NAME">Father Marcus</span><small data-i18n="ix.badge">News from Rome, ended in prayer</small></div>
     </div>
   </div></section>
 
   <div class="wrap">
     <div class="tiles">
-      <a class="tile" href="consecrate.html"><div class="ico">✠</div><div><b>Consecrate your home</b><span>Your family card, free</span></div></a>
-      <a class="tile" href="prayers.html#michael"><div class="ico">✦</div><div><b>St. Michael prayer</b><span>For protection</span></div></a>
-      <a class="tile" href="advent.html"><div class="ico">✧</div><div><b>Advent 2026</b><span>Starts November 29</span></div></a>
-      <a class="tile" data-yt href="#" target="_blank" rel="noopener"><div class="ico">▸</div><div><b>Watch the news</b><span>On YouTube</span></div></a>
+      <a class="tile" href="consecrate.html"><div class="ico">✠</div><div><b data-i18n="ix.t1b">Consecrate your home</b><span data-i18n="ix.t1s">Your family card, free</span></div></a>
+      <a class="tile" href="prayers.html#michael"><div class="ico">✦</div><div><b data-i18n="ix.t2b">St. Michael prayer</b><span data-i18n="ix.t2s">For protection</span></div></a>
+      <a class="tile" href="advent.html"><div class="ico">✧</div><div><b data-i18n="ix.t3b">Advent 2026</b><span data-i18n="ix.t3s">Starts November 29</span></div></a>
+      <a class="tile" data-yt href="#" target="_blank" rel="noopener"><div class="ico">▸</div><div><b data-i18n="ix.t4b">Watch the news</b><span data-i18n="ix.t4s">On YouTube</span></div></a>
     </div>
   </div>
 
   <section><div class="wrap center">
-    <div class="kicker">The treasury of the Church</div>
-    <h2>What do you need to pray for today?</h2>
-    <p class="lead">The prayers your grandparents knew by heart. Tap one to pray it, and send it to someone who needs it.</p>
+    <div class="kicker" data-i18n="ix.k2">The treasury of the Church</div>
+    <h2 data-i18n="ix.h2">What do you need to pray for today?</h2>
+    <p class="lead" data-i18n="ix.lead2">The prayers your grandparents knew by heart. Tap one to pray it, and send it to someone who needs it.</p>
     <div class="pgrid" id="pgrid" style="text-align:left"></div>
-    <a class="more" href="prayers.html">See all prayers →</a>
+    <a class="more" href="prayers.html" data-i18n="ix.more">See all prayers →</a>
   </div></section>
 
   <section class="cream"><div class="wrap feature">
-    <div class="stack"><canvas id="sample" width="1240" height="1754" aria-label="Example consecration card"></canvas><div class="tag">🎁 Free gift</div></div>
+    <div class="stack"><canvas id="sample" width="1240" height="1754" aria-label="Example consecration card" data-i18n-aria="ix.sampleAria"></canvas><div class="tag" data-i18n="ix.tag">🎁 Free gift</div></div>
     <div>
-      <div class="kicker">The gift for your family</div>
-      <h2>Put your home under the protection of Heaven</h2>
-      <p class="lead">Choose the Sacred Heart, Our Lady, St. Joseph or St. Michael. Write your family name and the names of those you love, and download a card to frame by your door.</p>
+      <div class="kicker" data-i18n="ix.k3">The gift for your family</div>
+      <h2 data-i18n="ix.h3">Put your home under the protection of Heaven</h2>
+      <p class="lead" data-i18n="ix.lead3">Choose the Sacred Heart, Our Lady, St. Joseph or St. Michael. Write your family name and the names of those you love, and download a card to frame by your door.</p>
       <ul class="checks">
-        <li>Ready in one minute, made on your own phone</li>
-        <li>A card to frame and a phone wallpaper</li>
-        <li>With a short prayer to pray together on Sunday</li>
+        <li data-i18n="ix.c1">Ready in one minute, made on your own phone</li>
+        <li data-i18n="ix.c2">A card to frame and a phone wallpaper</li>
+        <li data-i18n="ix.c3">With a short prayer to pray together on Sunday</li>
       </ul>
-      <a class="btn navy" href="consecrate.html">Make my family's card</a>
+      <a class="btn navy" href="consecrate.html" data-i18n="ix.btn3">Make my family's card</a>
     </div>
   </div></section>
 
   <section><div class="wrap">
     <div class="band">
-      <div><h2>A traditional Advent</h2><p>The wreath at your table, the Rorate Caeli and the great “O” Antiphons. From November 29.</p></div>
-      <a class="btn gold" href="advent.html">Prepare my Advent →</a>
+      <div><h2 data-i18n="ix.h4">A traditional Advent</h2><p data-i18n="ix.p4">The wreath at your table, the Rorate Caeli and the great “O” Antiphons. From November 29.</p></div>
+      <a class="btn gold" href="advent.html" data-i18n="ix.btn4">Prepare my Advent →</a>
     </div>
   </div></section>
 
   <section style="padding-top:0"><div class="wrap">
     <div class="chan">
-      <img src="father_marcus.jpg" alt="Father Marcus">
-      <div><div class="kicker">On YouTube</div><h3 style="margin:.1em 0 .2em">Pray With Father Marcus</h3><p class="note" style="font-size:16px;margin:0">The news from Rome and from the Church, with the real documents and the real quotes, and a prayer at the end of every video.</p></div>
+      <img data-fm-photo="chan" src="father_marcus.jpg" alt="Father Marcus">
+      <div><div class="kicker" data-i18n="ix.k5">On YouTube</div><h3 style="margin:.1em 0 .2em" data-fm="CHANNEL">Pray With Father Marcus</h3><p class="note" style="font-size:16px;margin:0" data-i18n="ix.p5">The news from Rome and from the Church, with the real documents and the real quotes, and a prayer at the end of every video.</p></div>
       <div class="acts">
-        <a class="btn navy" data-yt href="#" target="_blank" rel="noopener">Subscribe</a>
+        <a class="btn navy" data-yt href="#" target="_blank" rel="noopener" data-i18n="ix.sub">Subscribe</a>
         <a class="btn wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn gold" data-join href="#" target="_blank" rel="noopener">Become a member</a>
+        <a class="btn gold" data-join href="#" target="_blank" rel="noopener" data-i18n="ix.join">Become a member</a>
       </div>
     </div>
   </div></section>
@@ -83,7 +83,7 @@
 <script>
 document.getElementById("pgrid").innerHTML = PRAYERS.slice(0,8).map(p =>
   `<a class="pcard" href="prayers.html#${p.id}"><div class="ico">${p.e}</div><div><b>${p.t}</b><span>${p.w}</span></div></a>`).join("");
-FMCard.draw(document.getElementById("sample"), {pick:"heart", fam:"Miller", names:"John, Mary, Peter, Grandma Rose"});
+FMCard.draw(document.getElementById("sample"), FMCard.SAMPLE);
 </script>
 </body>
 </html>

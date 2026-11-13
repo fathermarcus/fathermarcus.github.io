@@ -1,14 +1,18 @@
 // UI of the consecration page. The drawing itself is in card.js (FMCard). Nothing is sent anywhere.
-let pick = "heart";
+// The first protector of each language (FMCard.ORDER[0]) is the country's own, shown large and chosen by default.
+let pick = FMCard.ORDER[0];
 const $ = id => document.getElementById(id);
 const cv = $("card");
 const opts = () => ({ pick, fam: $("fam").value, names: $("names").value });
 const redraw = async () => { await FMCard.draw(cv, opts()); prepare(); };
 
 function choicesUI(){
-  $("choices").innerHTML = Object.entries(FMCard.P).map(([k,v]) =>
-    `<div class="choice ${k===pick?'on':''}" data-k="${k}"><img src="${v.img}" alt="">${v.label}</div>`).join("");
-  document.querySelectorAll(".choice").forEach(el => el.onclick = () => { pick = el.dataset.k; choicesUI(); redraw(); });
+  $("choices").innerHTML = FMCard.ORDER.map((k,i) => { const v = FMCard.P[k];
+    return `<div class="choice ${i===0?'feat':''} ${k===pick?'on':''}" data-k="${k}" role="button" tabindex="0" aria-pressed="${k===pick}"><img src="${v.img}" alt="" style="object-position:${v.pos||'50% 30%'}"><span class="cl">${i===0&&FMCard.BADGE?`<span class="cbadge">${FMCard.BADGE}</span>`:""}${v.label}</span></div>`; }).join("");
+  document.querySelectorAll(".choice").forEach(el => {
+    el.onclick = () => { pick = el.dataset.k; choicesUI(); redraw(); };
+    el.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.click(); } };
+  });
 }
 // On phones, open the share sheet so the card can go straight to Photos; elsewhere, a normal download.
 // The images are prepared ahead of time so the share sheet opens inside the tap (Safari requires this).
@@ -24,23 +28,25 @@ async function save(kind, name){
   if (blob && touch && navigator.canShare) {
     const file = new File([blob], name, { type: "image/jpeg" });
     if (navigator.canShare({ files: [file] })) {
-      try { await navigator.share({ files: [file], title: "Our family consecration" }); return; }
+      try { await navigator.share({ files: [file], title: T("co.shareTitle") }); return; }
       catch (e) { if (e.name === "AbortError") return; }
     }
   }
   if (!blob) blob = kind === "card" ? await toBlob(cv) : await toBlob(await FMCard.phone(opts()));
   download(blob, name);
 }
-function fileName(suffix){ const f = ($("fam").value || "family").trim().replace(/[^a-z0-9]+/gi,"-").replace(/^-|-$/g,""); return `${f}-consecration-${suffix}.jpg`; }
+// File names in plain ASCII: "Müller" -> "Muller", "Núñez" -> "Nunez"
+function fileName(suffix){ const f = ($("fam").value || T("co.fileFamily")).trim().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/ß/g,"ss").replace(/[^a-z0-9]+/gi,"-").replace(/^-|-$/g,"") || "family"; return `${f}-${T("co.fileName")}-${suffix}.jpg`; }
 
 ["fam","names"].forEach(id => $(id).addEventListener("input", redraw));
-$("dlCard").onclick = () => save("card", fileName("card"));
-$("dlPhone").onclick = () => save("phone", fileName("phone"));
+$("dlCard").onclick = () => save("card", fileName(T("co.fileCard")));
+$("dlPhone").onclick = () => save("phone", fileName(T("co.filePhone")));
 $("print").onclick = () => { const w = window.open(""); w.document.write(`<img src="${cv.toDataURL("image/jpeg",.95)}" style="width:100%">`); w.document.close(); setTimeout(() => w.print(), 600); };
 $("share").onclick = e => {
-  const fam = ($("fam").value || "").trim();
-  const msg = `${fam ? "The " + fam + " family is" : "We are"} consecrating our home to ${FMCard.P[pick].label} 🙏 Make your family's card for free: ${location.origin}${location.pathname}`;
-  e.currentTarget.href = "https://wa.me/?text=" + encodeURIComponent(msg);
+  const fam = ($("fam").value || "").trim().replace(/^(the|familia|famille|familie)\s+/i, "").replace(/\s+(family|familie)$/i, "");
+  const link = `${location.origin}${location.pathname}${FM.langQuery()}`;
+  e.currentTarget.href = "https://wa.me/?text=" + encodeURIComponent(T("co.waMsg")(fam, FMCard.P[pick].dat, link));
 };
 choicesUI(); redraw();
-if (touch) { $("dlCard").textContent = "Save the card to my phone"; $("dlPhone").textContent = "Save as phone wallpaper"; }
+// On touch screens the buttons say "save to my phone"; the data-i18n key is switched so the translation keeps it.
+if (touch) { $("dlCard").dataset.i18n = "co.dlCardTouch"; $("dlPhone").dataset.i18n = "co.dlPhoneTouch"; FM.apply(document.querySelector(".dl")); }

@@ -2,61 +2,61 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Consecrate your home · Father Marcus</title>
-<meta name="description" content="Make a free consecration card for your family: your family name under the protection of the Sacred Heart, Our Lady, St. Joseph or St. Michael.">
+<title data-i18n="co.title">Consecrate your home · Father Marcus</title>
+<meta name="description" data-i18n-content="co.desc" content="Make a free consecration card for your family: your family name under the protection of the Sacred Heart, Our Lady, St. Joseph or St. Michael.">
 <meta property="og:title" content="Consecrate your home · free family card"><meta property="og:image" content="https://fathermarcus.github.io/sacred_heart.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:wght@400;600;700;800&family=EB+Garamond:ital,wght@0,400;1,400&family=IM+Fell+English+SC&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="site.js"></script><script src="card.js"></script>
+<script src="i18n.js"></script><script src="site.js"></script><script src="card.js"></script>
 </head>
 <body>
 <main>
   <section class="phero"><div class="wrap">
-    <div class="kicker">Free gift · made on your own device</div>
-    <h1>Consecrate your home</h1>
-    <p class="lead">For centuries Catholic families have placed their homes under the protection of the Sacred Heart, of Our Lady, of St. Joseph and of St. Michael. Make your family's card in one minute, frame it by your door, and pray it together.</p>
+    <div class="kicker" data-i18n="co.kicker">Free gift · made on your own device</div>
+    <h1 data-i18n="co.h1">Consecrate your home</h1>
+    <p class="lead" data-i18n="co.lead">For centuries Catholic families have placed their homes under the protection of the Sacred Heart, of Our Lady, of St. Joseph and of St. Michael. Make your family's card in one minute, frame it by your door, and pray it together.</p>
   </div></section>
 
   <div class="wrap gen">
     <div class="steps">
       <div class="step">
-        <h3><span class="num">1</span>Your family name</h3>
-        <input id="fam" type="text" maxlength="40" placeholder="e.g. O'Brien, Kowalski, Miller" autocomplete="family-name">
+        <h3><span class="num">1</span><span data-i18n="co.s1">Your family name</span></h3>
+        <input id="fam" type="text" maxlength="40" placeholder="e.g. O'Brien, Kowalski, Miller" data-i18n-ph="co.famPh" autocomplete="family-name">
       </div>
       <div class="step">
-        <h3><span class="num">2</span>Who will protect your home?</h3>
+        <h3><span class="num">2</span><span data-i18n="co.s2">Who will protect your home?</span></h3>
         <div class="choices" id="choices"></div>
       </div>
       <div class="step">
-        <h3><span class="num">3</span>Who lives under this roof? <span class="opt">optional</span></h3>
-        <input id="names" type="text" maxlength="160" placeholder="John, Mary, Peter, Grandma Rose">
-        <p class="note" style="margin:8px 0 0">Your names never leave your device. Nothing is sent or stored.</p>
+        <h3><span class="num">3</span><span data-i18n="co.s3">Who lives under this roof? <span class="opt">optional</span></span></h3>
+        <input id="names" type="text" maxlength="160" placeholder="John, Mary, Peter, Grandma Rose" data-i18n-ph="co.namesPh">
+        <p class="note" style="margin:8px 0 0" data-i18n="co.privacy">Your names never leave your device. Nothing is sent or stored.</p>
       </div>
       <div class="step">
-        <h3><span class="num">4</span>Download and share</h3>
+        <h3><span class="num">4</span><span data-i18n="co.s4">Download and share</span></h3>
         <div class="dl">
-          <button class="btn gold full" id="dlCard">Download the card to frame</button>
-          <button class="btn lineDark" id="dlPhone">Phone wallpaper</button>
-          <button class="btn lineDark" id="print">Print</button>
-          <a class="btn wa full" id="share" href="#" target="_blank" rel="noopener">Tell your family on WhatsApp</a>
+          <button class="btn gold full" id="dlCard" data-i18n="co.dlCard">Download the card to frame</button>
+          <button class="btn lineDark" id="dlPhone" data-i18n="co.dlPhone">Phone wallpaper</button>
+          <button class="btn lineDark" id="print" data-i18n="co.print">Print</button>
+          <a class="btn wa full" id="share" href="#" target="_blank" rel="noopener" data-i18n="co.share">Tell your family on WhatsApp</a>
         </div>
-        <p class="note saveHint">On a phone, a menu opens: tap <b>“Save Image”</b> (iPhone) or <b>“Save”</b> / <b>“Download”</b> (Android). The card goes to your photos.</p>
+        <p class="note saveHint" data-i18n="co.saveHint">On a phone, a menu opens: tap <b>“Save Image”</b> (iPhone) or <b>“Save”</b> / <b>“Download”</b> (Android). The card goes to your photos.</p>
       </div>
     </div>
-    <div class="preview"><canvas id="card" width="1240" height="1754" aria-label="Preview of your consecration card"></canvas></div>
+    <div class="preview"><canvas id="card" width="1240" height="1754" aria-label="Preview of your consecration card" data-i18n-aria="co.cardAria"></canvas></div>
   </div>
 
   <section><div class="wrap">
-    <div class="kicker">How to pray it at home</div>
-    <h2>A short family ceremony</h2>
+    <div class="kicker" data-i18n="co.k2">How to pray it at home</div>
+    <h2 data-i18n="co.h2">A short family ceremony</h2>
     <div class="howto">
-      <div><div class="ico">1</div><b>Gather</b>At the door or before a crucifix. Light a candle if you can.</div>
-      <div><div class="ico">2</div><b>Pray</b>The Sign of the Cross, one Our Father, one Hail Mary, one Glory Be.</div>
-      <div><div class="ico">3</div><b>Read</b>A parent reads the prayer on the card aloud. Everyone answers “Amen.”</div>
-      <div><div class="ico">4</div><b>Hang it</b>Where all can see it, and say the invocation together each night.</div>
+      <div><div class="ico">1</div><b data-i18n="co.h1b">Gather</b><span data-i18n="co.h1t">At the door or before a crucifix. Light a candle if you can.</span></div>
+      <div><div class="ico">2</div><b data-i18n="co.h2b">Pray</b><span data-i18n="co.h2t">The Sign of the Cross, one Our Father, one Hail Mary, one Glory Be.</span></div>
+      <div><div class="ico">3</div><b data-i18n="co.h3b">Read</b><span data-i18n="co.h3t">A parent reads the prayer on the card aloud. Everyone answers “Amen.”</span></div>
+      <div><div class="ico">4</div><b data-i18n="co.h4b">Hang it</b><span data-i18n="co.h4t">Where all can see it, and say the invocation together each night.</span></div>
     </div>
-    <p class="note" style="margin-top:18px">This card is a devotional aid, not a liturgical rite. If you can, ask your parish priest to bless your home.</p>
+    <p class="note" style="margin-top:18px" data-i18n="co.disclaimer">This card is a devotional aid, not a liturgical rite. If you can, ask your parish priest to bless your home.</p>
   </div></section>
 </main>
 <script src="consecrate.js"></script>
